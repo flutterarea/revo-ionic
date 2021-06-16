@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar class="navbar-white shadow-medium">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <div class="center">
+      <h4 class="up mb0">Shop</h4>
+      <div class="bg-standard pt1 plr30 inline mt0"></div>
+    </div>
+
+
+    <!-- Shop -->
+    <div class="p20">
+      <h6 class="text-left">Shop List</h6>
+      <p class="text-left mb20">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium</p>
+    </div>
+    <div class="pl10">
+      <ion-item class="border round-small inline w-auto">
+        <ion-label class="font-16 pr70">Sort</ion-label>
+        <ion-select [(ngModel)]="filter" class="font-16">
+          <ion-option value="price">Price</ion-option>
+          <ion-option value="added">Added</ion-option>
+          <ion-option value="rating">Rating</ion-option>
+          <ion-option value="reviews">Reviews</ion-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12 col-sm-6 col-md-4 col-xl-3 *ngFor="let product of products" (click)="openSingleProduct(product)">
+            <div class="mtb20 center border relative">
+              <div class="abs-tr bg-accent badge-inside font-12" *ngIf="product.on_sale">sale</div>
+              <img src="{{product.featured_src}}" class="img-responsive">
+              <h6 class="font-16 fw500 mtb0" [innerHTML]="product.title"></h6>
+              <p class="font-14 mtb10">
+                <span *ngFor="let cat of product.categories" class="bg-light round-big plr10 ptb5 mlr5 font-10 up">{{cat}}</span>
+              </p>
+              <p class="text-standard regular-f mt0" [innerHTML]="product.price_html"></p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+</ion-content>

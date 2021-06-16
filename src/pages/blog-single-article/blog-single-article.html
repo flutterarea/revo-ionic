@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar class="navbar-white shadow-medium">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+<div class="img-cover abs-tl full-width half-height" [style.backgroundImage]="'url(' + post.img + ')'" [ngStyle]="{'margin-top.px': -scroll/3, 'opacity': 1-scroll/500}"></div>
+
+<ion-content class="bg-transparent">
+  <!-- Blog Single Article -->
+
+  <div class="half-height"></div>
+
+      <div class="p20 text-left bg-white mt-40">
+        <h6 [innerHTML]="post.post.title.rendered"></h6>
+        <p class="m0 font-11 up op5">{{post.post.date | amTimeAgo:true}} ago by {{post.author}}</p>
+        <hr class="mb30">
+
+        <div [innerHTML]="post.post.content.rendered"></div>
+
+        <hr class="mb30">
+
+        <!-- Avatar List -->
+        <div class="mt50">
+          <h6 class="text-left pl10">Comments</h6>
+            <ion-list class="m0" *ngFor="let com of comments">
+              <ion-item>
+                <h3 class="fw600 font-12" [innerHTML]="com.author_name"></h3>
+                <p [innerHTML]="com.content.rendered"></p>
+              </ion-item>
+            </ion-list>
+        </div>
+
+      </div>
+
+    <!-- Footer standard -->
+    <div class="bg-dark center p20">
+      <p class="font-14"> &copy; PSSThemes.com - All Rights Reserved</p>
+        <img src="assets/img-icons/website-w.png" title="Website" class="p10">
+        <img src="assets/img-icons/email-w.png" title="Email" class="p10">
+        <img src="assets/img-icons/online-support-w.png" title="Support" class="p10">
+        <img src="assets/img-icons/facebook-w.png" title="Facebook" class="p10">
+    </div>
+    <!-- End footer standard -->
+
+</ion-content>

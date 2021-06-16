@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-navbar class="navbar-white">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="background: url(assets/img/home-travel-bg.jpg) no-repeat, center center" class="img-cover">
+    <div class="center plr20 pb30">
+      <h3 class="text-dark m0 pt30">Where do you want to go today?</h3>
+      <p class="text-dark font-14 plr30">Fill in the form and let us find the best match for your vacation.</p>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-sm-6 offset-sm-3>
+            <div class="ptb10">
+              <div class="box-form-fill pb30">
+                <ion-input class="form-fill round-small bg-white font-16 text-dark ptb10 mb20 plr20" type="text" placeholder="City or hotel name"></ion-input>
+                <ion-list class="mb10">
+                  <ion-item class="form-fill round-small bg-white font-16 text-dark no-border pl25 mt30">
+                    <ion-label class="text-dark">Number of guests</ion-label>
+                    <ion-select [(ngModel)]="guests" class="pr20">
+                      <ion-option value="nes">1</ion-option>
+                      <ion-option value="n64">2</ion-option>
+                      <ion-option value="ps">3</ion-option>
+                      <ion-option value="ps2">4+</ion-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+                <ion-list class="mb20">
+                  <ion-item class="form-fill round-small bg-white font-16 text-dark no-border pl25 mb30">
+                    <ion-label class="text-dark">How many rooms?</ion-label>
+                    <ion-select [(ngModel)]="rooms" class="pr20">
+                      <ion-option value="nes">1</ion-option>
+                      <ion-option value="n64">2</ion-option>
+                      <ion-option value="ps">3</ion-option>
+                      <ion-option value="ps2">4+</ion-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+                <ion-item class="form-fill round-small bg-white bg-white font-16 mb10 pl25">
+                  <ion-label class="text-dark">Check in</ion-label>
+                  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+                </ion-item>
+                <ion-item class="form-fill round-small bg-white bg-white font-16 mb10 pl25">
+                  <ion-label class="text-dark">Check out</ion-label>
+                  <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDateTwo"></ion-datetime>
+                </ion-item>
+              </div>
+              <a class="up text-white bg-standard plr40 ptb10 round-big font-14 fw600" menuToggle>find hotels</a>
+              <div class="pt10">
+                <img src="assets/img-icons/expand-arrow-w.png" title="Arrow Pointing Down" width="25" height="25">
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+  <div class="plr20 mt50">
+    <h4>Top locations</h4>
+    <p>We can do anything, but we will do everything for your project to stand out from the crowd. </p>
+  </div>
+  <!-- Hotels - cards -->
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-4>
+        <!-- Start Card -->
+        <div class="mtb20">
+          <div class="text-left img-cover round-small relative ov-hidden" style="background:url(assets/img/travel-1.jpg) no-repeat center center">
+            <div class="absolute full ov-img-full z-hi"></div>
+              <div class="ptb40 plr20 relative z-shi">
+                <h6 class="mtb0 font-18 fw600 text-white">Tamassa Resort</h6>
+                <p class="mt5 mb10 font-14 text-white">4.9 / 1,117 Reviews</p>
+                <a class="mt125 block text-white font-14 fw600">Order</a>
+              </div>
+          </div>
+        </div>
+        <!-- End Card -->
+      </ion-col>
+      <ion-col col-12 col-sm-4>
+        <!-- Start Card 3 -->
+        <div class="mtb20">
+          <div class="text-left img-cover round-small relative ov-hidden" style="background:url(assets/img/travel-2.jpg) no-repeat center center">
+            <div class="absolute full ov-img-full z-hi"></div>
+              <div class="ptb40 plr20 relative z-shi">
+                <h6 class="mtb0 font-18 fw600 text-white">Excellence Playa</h6>
+                <p class="mt5 mb10 font-14 text-white">4.7 / 2,154 Reviews</p>
+                <a class="mt125 block text-white font-14 fw600">Details</a>
+              </div>
+          </div>
+        </div>
+        <!-- End Card 3 -->
+      </ion-col>
+      <ion-col col-12 col-sm-4>
+        <!-- Start Card 3 -->
+        <div class="mtb20">
+          <div class="text-left img-cover round-small relative ov-hidden" style="background:url(assets/img/travel-3.jpg) no-repeat center center">
+            <div class="absolute full ov-img-full z-hi"></div>
+              <div class="ptb40 plr20 relative z-shi">
+                <h6 class="mtb0 font-18 fw600 text-white">La Maison d'Aix</h6>
+                <p class="mt5 mb10 font-14 text-white">4.8 / 2,217 Reviews</p>
+                <a class="mt125 block text-white font-14 fw600">Learn More</a>
+              </div>
+          </div>
+        </div>
+        <!-- End Card 3 -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+
+  <!-- Footer standard -->
+  <div class="bg-dark center p20">
+    <p class="font-14"> &copy; PSSThemes.com - All Rights Reserved</p>
+      <img src="assets/img-icons/website-w.png" title="Website" class="p10">
+      <img src="assets/img-icons/email-w.png" title="Email" class="p10">
+      <img src="assets/img-icons/online-support-w.png" title="Support" class="p10">
+      <img src="assets/img-icons/facebook-w.png" title="Facebook" class="p10">
+  </div>
+  <!-- End footer standard -->
+
+</ion-content>

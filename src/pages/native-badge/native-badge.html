@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-navbar class="navbar-white shadow-medium">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="p20 mb50">
+    <div class="center">
+      <h4 class="up mb0">Badge</h4>
+      <div class="bg-standard pt1 plr30 inline mt0"></div>
+    </div>
+
+    <div class="plr20 ptb10 mt20 center">
+      <div class="ptb20">
+        <h6 class="text-left">Set</h6>
+        <p class="text-left mb20">Display a badge number just near the app icon on your device.</p>
+        <button ion-button class="up text-white bg-standard font-14 c-btn-pill c-btn-medium mtb10" (click)="set(9)">set to 9</button>
+        <button ion-button class="up text-white bg-standard font-14 c-btn-pill c-btn-medium mtb10" (click)="set(3)">set to 3</button>
+        <button ion-button class="up text-white bg-standard font-14 c-btn-pill c-btn-medium mtb10" (click)="set(1)">increase with 1</button>
+        <button ion-button class="up text-white bg-standard font-14 c-btn-pill c-btn-medium mtb10" (click)="set(0)">remove</button>
+        <p class="text-left mb20">Minimize the app and go to your apps to see the badge.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer standard -->
+  <div class="bg-dark center p20">
+    <p class="font-14"> &copy; PSSThemes.com - All Rights Reserved</p>
+      <img src="assets/img-icons/website-w.png" title="Website" class="p10">
+      <img src="assets/img-icons/email-w.png" title="Email" class="p10">
+      <img src="assets/img-icons/online-support-w.png" title="Support" class="p10">
+      <img src="assets/img-icons/facebook-w.png" title="Facebook" class="p10">
+  </div>
+  <!-- End footer standard -->
+
+</ion-content>

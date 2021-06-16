@@ -1,0 +1,33 @@
+<ion-content style="background: url(assets/img/login-bg.jpg) no-repeat, center center" class="img-cover">
+
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col col-12 col-sm-6 col-md-12 class="center">
+        <p class="font-30 fw900 center m0 text-white">revo</p>
+        <h3 class="text-white m0 pt30">Access your account <br>in no time!</h3>
+        <p class="text-white font-14 plr30">Fill in the form and continue using your special app.</p>
+      </ion-col>
+      <ion-col col-12 col-sm-6 col-md-12 class="center">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12 col-md-6 offset-md-3 col-lg-4 offset-lg-4>
+              <div class="ptb10">
+                <div class="box-form-fill pb30">
+                  <ion-input class="form-fill round-small bg-white font-16 text-dark ptb10 plr20" type="text" placeholder="Username"></ion-input>
+                </div>
+                <div class="box-form-fill pb30">
+                  <ion-input class="form-fill round-small bg-white font-16 text-dark ptb10 plr20" type="password" placeholder="Password"></ion-input>
+                </div>
+                <a class="up text-white block bg-standard ptb20 round-small font-16 fw600" (click)="gotoHome()">login</a>
+                <p class="text-white font-14 pt30">Don't have an account already?</p>
+                <a class="up text-white block ptb20 round-small font-16 fw600" (click)="gotoRegister()">register</a>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

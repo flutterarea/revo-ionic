@@ -1,0 +1,224 @@
+<ion-header>
+  <ion-navbar class="navbar-white shadow-medium">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- Lists -->
+    <div class="center">
+      <h4 class="up mb0">Lists</h4>
+      <div class="bg-standard pt1 plr30 inline mt0"></div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12 col-sm-6>
+            <!-- Basic List -->
+            <div class="mt50">
+              <h6 class="text-left pl10">Basic List</h6>
+                <ion-list class="m0">
+                  <ion-item class="font-16">Terminator II</ion-item>
+                  <ion-item class="font-16">The Empire Strikes Back</ion-item>
+                  <ion-item class="font-16">Blade Runner</ion-item>
+                </ion-list>
+            </div>
+            <!-- Basic List -->
+          </ion-col>
+          <ion-col col-12 col-sm-6>
+            <!-- Icon List -->
+            <div class="mt50">
+              <h6 class="text-left pl10">Icon List</h6>
+                <ion-list class="m0">
+                  <ion-item class="font-16">
+                    <div class="inline mr10"><img src="assets/img-icons/user.png"></div>
+                      <div class="inline text-align">User account</div>
+                      <img src="assets/img-icons/downward-arrow.png" item-end>
+                  </ion-item>
+
+                  <ion-item class="font-16">
+                    <div class="inline mr10"><img src="assets/img-icons/protect.png"></div>
+                      <div class="inline text-align">Security</div>
+                      <img src="assets/img-icons/up-3.png" item-end>
+                  </ion-item>
+
+                  <ion-item class="font-16">
+                    <div class="inline mr10"><img src="assets/img-icons/mobile.png"></div>
+                      <div class="inline text-align">Responsive</div>
+                      <img src="assets/img-icons/downward-arrow.png" item-end>
+                  </ion-item>
+                </ion-list>
+            </div>
+            <!-- Icon List -->
+          </ion-col>
+          <ion-col col-12 col-sm-6>
+            <!-- Avatar List -->
+            <div class="mt50">
+              <h6 class="text-left pl10">Avatar List</h6>
+                <ion-list class="m0">
+                  <ion-item>
+                    <ion-avatar item-start>
+                      <img src="assets/img/user1.jpg">
+                    </ion-avatar>
+                    <h3 class="fw600">Peter Merholz</h3>
+                    <p class="font-16 fw600">Don't Know What To Do!</p>
+                    <p class="font-14">I've had a pretty messed up day. If we just...</p>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-avatar item-start>
+                      <img src="assets/img/user2.jpg">
+                    </ion-avatar>
+                    <h3 class="fw600">Kareem Mostafa</h3>
+                    <p class="font-16 fw600">Don't Know What To Do!</p>
+                    <p class="font-14">I've had a pretty messed up day. If we just...</p>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-avatar item-start>
+                      <img src="assets/img/user3.jpg">
+                    </ion-avatar>
+                    <h3 class="fw600">Adelle Charles</h3>
+                    <p class="font-16 fw600">Don't Know What To Do!</p>
+                    <p class="font-14">I've had a pretty messed up day. If we just...</p>
+                  </ion-item>
+                </ion-list>
+            </div>
+            <!-- Avatar List -->
+          </ion-col>
+          <ion-col col-12 col-sm-6>
+            <!-- Avatar List -->
+            <div class="mt50">
+              <h6 class="text-left pl10">Thumbnails List</h6>
+                <ion-list class="m0">
+                  <ion-item>
+                    <ion-thumbnail item-start>
+                      <img src="assets/img/user1.jpg" class="round-small">
+                    </ion-thumbnail>
+                    <h3 class="fw600">Peter Merholz</h3>
+                    <p class="font-16 fw600">Don't Know What To Do!</p>
+                    <a class="bg-accent badge-inside-small" item-end>view</a>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-thumbnail item-start>
+                      <img src="assets/img/user2.jpg" class="round-small">
+                    </ion-thumbnail>
+                    <h3 class="fw600">Kareem Mostafa</h3>
+                    <p class="font-16 fw600">Don't Know What To Do!</p>
+                    <a class="bg-standard badge-inside-small" item-end>call</a>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-thumbnail item-start>
+                      <img src="assets/img/user3.jpg" class="round-small">
+                    </ion-thumbnail>
+                    <h3 class="fw600">Adelle Charles</h3>
+                    <p class="font-16 fw600">Don't Know What To Do!</p>
+                    <a class="bg-dark badge-inside-small" item-end>chat</a>
+                  </ion-item>
+                </ion-list>
+            </div>
+            <!-- Avatar List -->
+          </ion-col>
+          <ion-col col-12 col-sm-6>
+            <!-- Avatar List -->
+            <div class="mt50">
+              <h6 class="text-left pl10">Sliding List</h6>
+              <ion-list>
+                <ion-item-sliding #item>
+                  <ion-item>
+                    <ion-avatar item-start>
+                      <img src="assets/img/user1.jpg">
+                    </ion-avatar>
+                    <h3 class="fw600">Peter Merholz</h3>
+                    <p class="font-16 fw600">Don't Know What To Do!</p>
+                    <p class="font-14">I've had a pretty messed up day. If we just...</p>
+                  </ion-item>
+                  <ion-item-options side="left">
+                    <button ion-button class="bg-transparent"><img src="assets/img-icons/email-b.png"></button>
+                    <button ion-button class="bg-transparent"><img src="assets/img-icons/phone-g.png"></button>
+                  </ion-item-options>
+
+                  <ion-item-options side="right">
+                    <button ion-button class="bg-transparent"><img src="assets/img-icons/eraser.png"></button>
+                  </ion-item-options>
+                </ion-item-sliding>
+
+                <ion-item-sliding #item>
+                  <ion-item>
+                    <ion-avatar item-start>
+                      <img src="assets/img/user2.jpg">
+                    </ion-avatar>
+                    <h3 class="fw600">Kareem Mostafa</h3>
+                    <p class="font-16 fw600">Don't Know What To Do!</p>
+                    <p class="font-14">I've had a pretty messed up day. If we just...</p>
+                  </ion-item>
+                  <ion-item-options side="left">
+                    <button ion-button class="bg-transparent"><img src="assets/img-icons/email-b.png"></button>
+                    <button ion-button class="bg-transparent"><img src="assets/img-icons/phone-g.png"></button>
+                  </ion-item-options>
+
+                  <ion-item-options side="right">
+                    <button ion-button class="bg-transparent"><img src="assets/img-icons/eraser.png"></button>
+                  </ion-item-options>
+                </ion-item-sliding>
+
+                <ion-item-sliding #item>
+                  <ion-item>
+                    <ion-avatar item-start>
+                      <img src="assets/img/user3.jpg">
+                    </ion-avatar>
+                    <h3 class="fw600">Adelle Charles</h3>
+                    <p class="font-16 fw600">Don't Know What To Do!</p>
+                    <p class="font-14">I've had a pretty messed up day. If we just...</p>
+                  </ion-item>
+                  <ion-item-options side="left">
+                    <button ion-button class="bg-transparent"><img src="assets/img-icons/email-b.png"></button>
+                    <button ion-button class="bg-transparent"><img src="assets/img-icons/phone-g.png"></button>
+                  </ion-item-options>
+
+                  <ion-item-options side="right">
+                    <button ion-button class="bg-transparent"><img src="assets/img-icons/eraser.png"></button>
+                  </ion-item-options>
+                </ion-item-sliding>
+                </ion-list>
+            </div>
+            <!-- Avatar List -->
+          </ion-col>
+          <ion-col col-12 col-sm-6>
+            <!-- Avatar List -->
+            <div class="mt50">
+              <h6 class="text-left pl10">Reorder List</h6>
+                <ion-list class="m0">
+                  <ion-item-group reorder="true" (ionItemReorder)="reorderItems($event)">
+                    <ion-item *ngFor="let item of items">
+                      <ion-thumbnail item-start>
+                        <img src="assets/img/{{item.avatar}}.jpg" class="round-small">
+                      </ion-thumbnail>
+                      <h3 class="fw600">{{item.name}}</h3>
+                      <p class="font-16 fw600">{{item.message}}</p>
+                    </ion-item>
+                  </ion-item-group>
+                </ion-list>
+            </div>
+            <!-- Avatar List -->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </div>
+
+    <!-- Footer standard -->
+    <div class="bg-dark center p20">
+      <p class="font-14"> &copy; PSSThemes.com - All Rights Reserved</p>
+        <img src="assets/img-icons/website-w.png" title="Website" class="p10">
+        <img src="assets/img-icons/email-w.png" title="Email" class="p10">
+        <img src="assets/img-icons/online-support-w.png" title="Support" class="p10">
+        <img src="assets/img-icons/facebook-w.png" title="Facebook" class="p10">
+    </div>
+    <!-- End footer standard -->
+
+</ion-content>

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar class="navbar-white shadow-medium">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <!-- Blog Articles -->
+    <div class="p20 center">
+      <h4 class="up mb0">Blog Articles</h4>
+      <div class="bg-standard pt1 plr30 inline mt0"></div>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 col-sm-6 col-md-4 *ngFor="let p of posts" (click)="openSingleArticle(p)">
+          <!-- Blog Article -->
+          <div class="mtb30 border p10">
+            <h6 class="m0" [innerHTML]="p.post.title.rendered"></h6>
+            <p class="m0 font-11 up op5">{{p.post.date | amTimeAgo:true}} ago by {{p.author}}</p>
+            <div [style.backgroundImage]="'url(' + p.img + ')'" class="img-cover ptb70 mtb20 round-small"></div>
+            <p class="m0 font-16 pb30" [innerHTML]="p.post.excerpt.rendered"></p>
+            <a class="block text-standard font-14 fw600">Read More</a>
+          </div>
+          <!-- End Blog Article -->
+        </ion-col>
+        <ion-infinite-scroll [enabled]="morePagesAvailable" (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="Loading more posts ...">
+        </ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+      </ion-row>
+    </ion-grid>
+
+
+    <!-- Footer standard -->
+    <div class="bg-dark center p20">
+      <p class="font-14"> &copy; PSSThemes.com - All Rights Reserved</p>
+        <img src="assets/img-icons/website-w.png" title="Website" class="p10">
+        <img src="assets/img-icons/email-w.png" title="Email" class="p10">
+        <img src="assets/img-icons/online-support-w.png" title="Support" class="p10">
+        <img src="assets/img-icons/facebook-w.png" title="Facebook" class="p10">
+    </div>
+    <!-- End footer standard -->
+
+</ion-content>

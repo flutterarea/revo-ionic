@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar class="navbar-white shadow-medium">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <!-- Map Small + Address -->
+  <div class="p20">
+
+    <h5>2300 Traverwood Dr.<br>
+        Ann Arbor, MI 48105</h5>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="center p20 border round-small">
+            <img src="assets/img-icons/letterbox.png" title="Title">
+            <p class="font-12 m0">john@pssthemes.com</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="center p20 border round-small">
+            <img src="assets/img-icons/office-phone.png" title="Title">
+            <p class="font-12 m0">+1 234 56 789</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <div class="box-form-fill bg-light p20" *ngIf="message">
+      <p class="text-left mb20">Fill in the form and send us your message. We'll get back in a bit.</p>
+
+        <ion-input class="bg-white font-16 text-dark ptb10 plr20" type="text" placeholder="Username"></ion-input>
+        <ion-input class="bg-white font-16 text-dark ptb10 plr20 mtb10" type="password" placeholder="Password"></ion-input>
+        <ion-list class="mb10">
+          <ion-item class="bg-white font-16 text-dark no-border pl25">
+            <ion-label class="text-dark">Department</ion-label>
+            <ion-select [(ngModel)]="gaming" class="pr20">
+              <ion-option value="nes">IT</ion-option>
+              <ion-option value="n64">Marketing</ion-option>
+              <ion-option value="ps">HR</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        <textarea class="font-16 text-dark ptb10 plr20" rows="2" type="text" placeholder="Message..."></textarea>
+    </div>
+
+    <div class="center ptb30">
+      <a class="up text-white bg-standard plr40 ptb10 round-big font-14 fw600" (click)="openMessage()">send us a message</a>
+    </div>
+
+    <p>Give us a call or drop by anytime, we are excited to answer your enquiries within 24 hours.</p>
+    <p class="font-14"><em>We are open from 11am — 5pm week days.</em></p>
+
+    <div #mapSmall id="mapSmall"></div>
+
+  </div>
+  <!-- End Map Small + Address -->
+</ion-content>

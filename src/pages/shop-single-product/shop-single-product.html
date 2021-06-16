@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar class="navbar-white shadow-medium">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class="center">
+    <ion-row>
+      <ion-col col-12 col-sm-6>
+        <div class="center pb50">
+          <img src="{{featImg}}" class="img-responsive">
+          <div class="inline m5 p5 border" *ngFor="let img of product.images">
+            <img src="{{img.src}}" width="50" (click)="featImg=img.src">
+          </div>
+        </div>
+      </ion-col>
+      <ion-col col-12 col-sm-6>
+        <ion-grid class="center">
+          <ion-row>
+            <ion-col col-sm-12>
+              <div class="border round-small p20">
+                <img src="assets/img-icons/heart-2.png" title="Lion Head">
+                <h6 class="mtb0 font-14 fw600">Save</h6>
+              </div>
+            </ion-col>
+            <ion-col col-sm-12>
+              <div class="border round-small p20">
+                <img src="assets/img-icons/phone.png" title="Lion Head">
+                <h6 class="mtb0 font-14 fw600">Call</h6>
+              </div>
+            </ion-col>
+            <ion-col col-sm-12>
+              <div class="border round-small p20">
+                <img src="assets/img-icons/send-email.png" title="Lion Head">
+                <h6 class="mtb0 font-14 fw600">Email</h6>
+              </div>
+            </ion-col>
+            <ion-col col-sm-12>
+              <div class="bg-standard round-small p20">
+                <img src="assets/img-icons/cart-w.png" title="Lion Head">
+                <h6 class="mtb0 font-14 fw600 text-white">Purchase</h6>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+<div class="p20">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-6>
+        <h4 [innerHTML]="product.title"></h4>
+        <span [innerHTML]="product.price_html"></span>
+
+        <p class="font-14 mtb10">
+          <span *ngFor="let cat of product.categories" class="bg-light round-big plr10 ptb5 mlr5 font-10 up">{{cat}}</span>
+        </p>
+      </ion-col>
+      <ion-col col-12 col-sm-6>
+        <div [innerHTML]="product.description"></div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</div>
+
+
+</ion-content>

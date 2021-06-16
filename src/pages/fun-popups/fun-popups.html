@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-navbar class="navbar-white shadow-medium">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="p20">
+    <div class="center">
+      <h4 class="up mb0">Popup Boxes</h4>
+      <div class="bg-standard pt1 plr30 inline mt0"></div>
+    </div>
+
+    <div class="plr20 ptb10 mt20 center">
+      <div class="ptb20">
+        <h6 class="text-left">Ionic standard alert</h6>
+        <p class="text-left mb20">Standard Ionic alert function, different style applied on top.</p>
+        <button ion-button class="up text-white bg-standard font-14 c-btn-pill c-btn-medium mtb10" (click)="openStandard()">open standard</button>
+      </div>
+    </div>
+
+    <div class="plr20 ptb10 mt20 center">
+      <div class="ptb20">
+        <h6 class="text-left">Custom alert</h6>
+        <p class="text-left mb20">Great if you need to display a custom window to your users.</p>
+        <button ion-button class="up text-white bg-standard font-14 c-btn-pill c-btn-medium mtb10" (click)="openMiddle()">standard middle</button>
+        <button ion-button class="up text-white bg-standard font-14 c-btn-pill c-btn-medium mtb10" (click)="openOverlay()">image overlay</button>
+      </div>
+    </div>
+    <div class="custom-alert" *ngIf="popupMiddle">
+      <div class="ov-img-full full abs-tl" (click)="popupMiddle = false"></div>
+      <div class="custom-alert-content bg-white shadow-medium" #popupM>
+        <ion-grid no-padding>
+          <ion-row>
+            <ion-col style="background:url(assets/img/home-gallery1.jpg) no-repeat center center" class="img-cover">
+            </ion-col>
+            <ion-col class="ptb30 plr10">
+              <h6 class="m0">Look, a pretty awesome popup!</h6>
+              <p>Image and text, what a great combination.</p>
+              <a class="bg-standard round-smallest plr30 ptb10 up font-12" (click)="popupMiddle = false">Details</a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+
+    <div class="custom-alert custom-alert-big" *ngIf="popupOverlay">
+      <div class="img-cover full abs-tl" (click)="popupOverlay = false" style="background:url(assets/img/home-gallery3.jpg) no-repeat center center"></div>
+      <div class="custom-alert-content bg-white shadow-medium" #popupO>
+        <ion-grid no-padding>
+          <ion-row>
+            <ion-col class="ptb30 plr10">
+              <h6 class="m0">Look, a pretty awesome popup!</h6>
+              <p>It's nice to have such an information displayed here.</p>
+              <a class="bg-standard round-smallest plr30 ptb10 up font-14" (click)="popupOverlay = false">Details</a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+
+    <!-- Auto popup -->
+    <div class="custom-alert" *ngIf="popupAuto">
+      <div class="ov-img-full full abs-tl" (click)="popupAuto = false"></div>
+      <div class="custom-alert-content bg-white shadow-medium pb30" #popupA>
+        <ion-grid no-padding>
+          <ion-row align-items-center>
+            <ion-col class="center" col-sm-4>
+              <img src="assets/img-icons/tornado.png">
+            </ion-col>
+            <ion-col class="ptb30 plr10">
+              <h6 class="m0">Look, a pretty auto popup!</h6>
+              <p>Use the auto feature to attract visitors attention.</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <img src="assets/img-icons/ok.png" class="custom-alert-close"  (click)="popupAuto = false">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer standard -->
+  <div class="bg-dark center p20">
+    <p class="font-14"> &copy; PSSThemes.com - All Rights Reserved</p>
+      <img src="assets/img-icons/website-w.png" title="Website" class="p10">
+      <img src="assets/img-icons/email-w.png" title="Email" class="p10">
+      <img src="assets/img-icons/online-support-w.png" title="Support" class="p10">
+      <img src="assets/img-icons/facebook-w.png" title="Facebook" class="p10">
+  </div>
+  <!-- End footer standard -->
+
+</ion-content>

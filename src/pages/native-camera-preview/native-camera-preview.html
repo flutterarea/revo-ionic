@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar class="navbar-white shadow-medium">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+<ion-content [ngClass]="{'bg-transparent':cam, 'bg-white':!cam}">
+
+  <div class="p20 mb50">
+    <div class="center" *ngIf="!cam">
+      <h4 class="up mb0">Camera Preview</h4>
+      <div class="bg-standard pt1 plr30 inline mt0"></div>
+    </div>
+
+    <div class="plr20 ptb10 mt20 center on-top">
+      <div class="ptb20">
+        <span *ngIf="!cam">
+          <h6 class="text-left">Give it a try</h6>
+          <p class="text-left mb20">Use this awesome plugin in your Augmented Reality app.</p>
+          <button ion-button class="up text-white bg-standard font-14 c-btn-pill c-btn-medium mtb10" (click)="start()">start camera</button>
+        </span>
+        <span *ngIf="cam">
+          <button ion-button class="up text-dark bg-light font-11 c-btn-pill c-btn-small mtb10" (click)="effect('negative')">effect negative</button>
+          <button ion-button class="up text-dark bg-light font-11 c-btn-pill c-btn-small mtb10" (click)="effect('posterize')">effect posterize</button>
+          <button ion-button class="up text-dark bg-light font-11 c-btn-pill c-btn-small mtb10" (click)="effect('sepia')">effect sepia</button>
+          <button ion-button class="up text-dark bg-light font-11 c-btn-pill c-btn-small mtb10" (click)="effect('none')">effect none</button>
+          <button ion-button class="up text-white bg-standard font-14 c-btn-pill c-btn-medium mtb10" (click)="switch()">switch camera</button>
+          <button ion-button class="up text-white bg-standard font-14 c-btn-pill c-btn-medium mtb10" (click)="stop()">stop camera</button>
+        </span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer standard -->
+  <div *ngIf="!cam" class="bg-dark center p20">
+    <p class="font-14"> &copy; PSSThemes.com - All Rights Reserved</p>
+      <img src="assets/img-icons/website-w.png" title="Website" class="p10">
+      <img src="assets/img-icons/email-w.png" title="Email" class="p10">
+      <img src="assets/img-icons/online-support-w.png" title="Support" class="p10">
+      <img src="assets/img-icons/facebook-w.png" title="Facebook" class="p10">
+  </div>
+  <!-- End footer standard -->
+
+</ion-content>

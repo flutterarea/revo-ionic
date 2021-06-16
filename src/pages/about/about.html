@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-navbar class="navbar-white shadow-medium">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Top -->
+    <div style="background: url(assets/img/about-bg.jpg)" class="img-cover relative">
+      <div class="absolute full ov-img-full"></div>
+      <div class="ptb50 plr20 center relative z-shi">
+        <h4 class="text-white up">About Us</h4>
+        <p class="text-white">Sed ut perspiciatis unde omnis.</p>
+      </div>
+    </div>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-12 col-sm-6>
+      <!-- Description -->
+      <div class="p20">
+        <h4 class="mb0"> Lorem ipsum dolor</h4>
+        <div class="bg-standard pt1 plr30 inline mt0"></div>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti. </p>
+
+        <h4 class="mb0">Our skills</h4>
+        <div class="bg-standard pt1 plr30 inline mt0"></div>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti. </p>
+        <div class="skills pb20">
+          <div class="skill relative">
+            <ion-range min="0" max="100" [(ngModel)]="css" pin="true" disabled="true"></ion-range>
+            <span>CSS</span>
+          </div>
+          <div class="skill relative">
+            <ion-range min="0" max="100" [(ngModel)]="html" pin="true" disabled="true"></ion-range>
+            <span>HTML</span>
+          </div>
+          <div class="skill relative">
+            <ion-range min="0" max="100" [(ngModel)]="ionic" pin="true" disabled="true"></ion-range>
+            <span>Ionic  3</span>
+          </div>
+        </div>
+      </div>
+    </ion-col>
+    <ion-col col-12 col-sm-6>
+      <!-- Team -->
+      <div class="p20">
+        <h4 class="mb0">Meet our team</h4>
+        <div class="bg-standard pt1 plr30 inline mt0"></div>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti. </p>
+
+        <!-- Slider -->
+        <ion-slides pager class="ptb50">
+          <ion-slide>
+            <div style="background:url(assets/img/member1.jpg) no-repeat center center" class="img-cover round elem-medium inline"></div>
+            <h6 class="mt30">Veronica Braun</h6>
+            <p class="mb30">Founder & CEO</p>
+            <div class="pb50">
+              <img src="assets/img-icons/email.png" title="Email" class="p10">
+              <img src="assets/img-icons/online-support.png" title="Support" class="p10">
+              <img src="assets/img-icons/facebook.png" title="Facebook" class="p10">
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div style="background:url(assets/img/member2.jpg) no-repeat center center" class="img-cover round elem-medium inline"></div>
+            <h6 class="mt30">Jad Limcaco</h6>
+            <p class="mb30">Web Designer</p>
+            <div class="pb50">
+              <img src="assets/img-icons/website.png" title="Website" class="p10">
+              <img src="assets/img-icons/email.png" title="Email" class="p10">
+              <img src="assets/img-icons/online-support.png" title="Support" class="p10">
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div style="background:url(assets/img/member3.jpg) no-repeat center center" class="img-cover round elem-medium inline"></div>
+            <h6 class="mt30">Towhid Zaman</h6>
+            <p class="mb30">Marketing Director</p>
+            <div class="pb50">
+              <img src="assets/img-icons/website.png" title="Website" class="p10">
+              <img src="assets/img-icons/email.png" title="Email" class="p10">
+              <img src="assets/img-icons/facebook.png" title="Facebook" class="p10">
+            </div>
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+    <hr class="m20">
+
+    <!-- Description -->
+    <div class="p20 center">
+      <h4 class="mb0">Lorem ipsum dolor</h4>
+      <div class="bg-standard pt1 plr30 inline mt0"></div>
+      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. </p>
+    </div>
+
+    <!-- Footer standard -->
+    <div class="bg-dark center p20">
+      <p class="font-14"> &copy; PSSThemes.com - All Rights Reserved</p>
+        <img src="assets/img-icons/website-w.png" title="Website" class="p10">
+        <img src="assets/img-icons/email-w.png" title="Email" class="p10">
+        <img src="assets/img-icons/online-support-w.png" title="Support" class="p10">
+        <img src="assets/img-icons/facebook-w.png" title="Facebook" class="p10">
+    </div>
+    <!-- End footer standard -->
+
+</ion-content>

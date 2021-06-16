@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar class="navbar-white shadow-medium">
+    <button ion-button icon-only menuToggle>
+      <img src="assets/img-icons/menu.png">
+    </button>
+    <p class="font-30 fw900 abs-tr m0 pr10 text-dark">revo</p>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="p20">
+    <div class="center">
+      <h4 class="up mb0">Search</h4>
+      <div class="bg-standard pt1 plr30 inline mt0"></div>
+    </div>
+
+    <div class="plr20 ptb10 mt20 center">
+      <div class="ptb20">
+        <h6 class="text-left">Filter results</h6>
+        <p class="text-left mb20">Fill in the searching form and the list results will be filtered based on your searching terms.</p>
+        <ion-searchbar (ionInput)="getItems($event)" class="bg-white"></ion-searchbar>
+        <ion-list class="pt30">
+          <ion-item *ngFor="let item of items">
+            {{ item }}
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer standard -->
+  <div class="bg-dark center p20">
+    <p class="font-14"> &copy; PSSThemes.com - All Rights Reserved</p>
+      <img src="assets/img-icons/website-w.png" title="Website" class="p10">
+      <img src="assets/img-icons/email-w.png" title="Email" class="p10">
+      <img src="assets/img-icons/online-support-w.png" title="Support" class="p10">
+      <img src="assets/img-icons/facebook-w.png" title="Facebook" class="p10">
+  </div>
+  <!-- End footer standard -->
+
+</ion-content>

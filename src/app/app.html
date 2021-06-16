@@ -1,19 +1,41 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-split-pane when="lg">
+    <ion-menu [content]="content">
+    <ion-content class="left-menu">
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
+      <div class="relative z-shi pb40">
 
-</ion-menu>
+          <ion-item class="bg-transparent p30">
+            <ion-avatar item-start>
+              <img src="assets/img/member1.jpg">
+            </ion-avatar>
+            <h6 class="text-white">Ema McFly</h6>
+            <p class="font-9 text-white">Photographer</p>
+          </ion-item>
 
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+          <div *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngClass]="{'menu-item-active': isLevel1Shown('idx'+i)}">
+            <span class="main-menu">
+              {{p.category}}
+            </span>
+            <div *ngIf="isLevel1Shown('idx'+i)">
+              <div *ngFor="let s of p.subs; let i2=index" text-wrap (click)="openPage(s.page)" menuClose>
+                <span class="subcategory-menu">
+                  <img src="assets/img-icons/forward.png" title="Forward">
+                  <span class="pl10">{{s.title}}</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+    </ion-content>
+
+    <ion-footer class="bg-dark">
+      <span class="text-white p10 font-7">revo v 1.0</span>
+      <span class="text-white p10 font-7 abs-r">by PSSThemes</span>
+    </ion-footer>
+  </ion-menu>
+
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main></ion-nav>
+</ion-split-pane>

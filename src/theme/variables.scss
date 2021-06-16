@@ -46,6 +46,9 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
+$split-pane-ios-side-min-width: 270px;
+$split-pane-ios-side-max-width: 270px;
+$split-pane-ios-border: 0px;
 
 
 
@@ -53,6 +56,9 @@ $colors: (
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
+$split-pane-md-side-min-width: 270px;
+$split-pane-md-side-max-width: 270px;
+$split-pane-md-border: 0px;
 
 
 

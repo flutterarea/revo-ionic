@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css.css">
+  <script src="assets/smooth-scroll.js"></script>
+  <script src="assets/js.js"></script>
+</head>
+<body>
+  <nav>
+    <a data-scroll href="#intro">Intro</a>
+    <a data-scroll href="#ionic">Ionic setup</a>
+    <a data-scroll href="#app">App setup</a>
+    <a data-scroll href="#html">Layout (HTML)</a>
+    <a data-scroll href="#css">Design (CSS)</a>
+    <a data-scroll href="#ts">Functions (TS)</a>
+    <a data-scroll href="#native">Native Plugins</a>
+    <a data-scroll href="#providers">Wordpress and Woocommerce API Providers</a>
+  </nav>
+
+  <div class="content">
+
+    <div id="intro">
+
+      <h1>Revo - Documentation - v1.2</h1>
+
+      <p>Thank you for purchasing Revo.</p>
+      <p>We did our best to cover most of the things you need to get familiar with, how to apply your style, colors, how to work with the elements, pages, a bit about how to add functions to the app. Of course, we will review the document every time we will release a new update, and will cover more areas in the future.</p>
+      <p>If you cannot find what you need in this document, don't hesitate to get in touch, our friendly team will get back as soon as possible.</p>
+
+    </div>
+
+    <div id="ionic">
+
+    <h1>Installing Ionic</h1>
+
+    <p>Ionic apps are created and developed primarily through the Ionic command line utility (the “CLI”), and use Cordova to build and deploy as a native app. This means we need to install a few utilities to get developing.</p>
+
+    <h3>Ionic CLI and Cordova</h3>
+
+    <p>To create Ionic projects, you’ll need to install the latest version of the CLI and Cordova. Before you do that, you’ll need a recent version of Node.js. <a href="https://nodejs.org/" target="_blank">Download the installer</a> for Node.js 6 or greater and then proceed to install the Ionic CLI and Cordova for native app development:</p>
+
+    <xmp>npm install -g ionic cordova</xmp>
+
+      <em>You may need to add “sudo” in front of these commands to install the utilities globally</em>
+
+    <p>Once that’s done, you can create your first Ionic app:</p>
+
+    <xmp>ionic start myApp sidemenu</xmp>
+
+    <p>To preview your app in the browser, first navigate to app browser and serve:</p>
+
+    <xmp>cd myApp</xmp>
+
+    <xmp>ionic serve</xmp>
+
+    <h3>Platform Guides</h3>
+
+    <p>For those building native apps for iOS and Android (most of you!), each platform has certain features and installation requirements before you can get the most out of your Ionic and Cordova development.</p>
+
+    <p>For iOS developers, take a look at the <a href="https://cordova.apache.org/docs/en/latest/guide/platforms/ios/" target="_blank">Cordova iOS Platform Guide</a> and follow the instructions to install or upgrade Xcode, and possibly register for a developer account to start building apps for iOS.</p>
+
+    <p>For Android developers, take a look at the <a href="https://cordova.apache.org/docs/en/latest/guide/platforms/android/" target="_blank">Cordova Android Platform Guide</a> and follow the instructions to install the SDK and/or Android Studio to start building apps for Android.</p>
+
+    </div>
+
+    <div id="app">
+
+      <h1>App setup</h1>
+
+      <p>Now that you have succesfully installed Ionic on your computer and all dependencies, let's start setting the app on your computer.</p>
+
+      <h3>Create a new app</h3>
+
+      <p>As we learned earlier, create a new folder on your computer, in your terminal / cmd run</p>
+
+      <xmp>cd </xmp>
+
+      <p>followed by drag and drop the folder you just created. Pressing enter will set the path in your terminal / cmd to the folder. Here you can write </p>
+
+      <xmp>ionic start myApp sidemenu</xmp>
+
+      <p>in order to create your new app. It will be a standard Ionic app with a sidemenu navigation and 2 pages, but you need only the base structure of the app. </p>
+
+      <p>Now replace in the app the src folder with the one in the package.</p>
+
+      <p>Run the following command to install animations library:</p>
+
+      <xmp>
+        npm install --save css-animator
+      </xmp>
+
+      <p>And now, running </p>
+
+      <xmp>ionic serve</xmp>
+
+      <p>will open the app preview in the browser</p>
+
+    </div>
+
+
+    <div id="html">
+
+      <h1>App layout elements (HTML)</h1>
+
+      <p>To modify / add or remove layout elements, you need to be familiar with HTML and CSS techniques. Is not a must to create a simple app based on what we already included in the package, but is good to have a better sense.</p>
+
+      <h3>Responsive - Grid</h3>
+
+      <p>The app is 100%, meaning that it will look good on every screen. You can set the layout based on the screen size. If the screen size is changed on the go (portrait to landscape), the elements will auto arrange.</p>
+
+      <p>The grid is composed of three units — a grid, row(s) and column(s). Columns will expand to fill their row, and will resize to fit additional columns. It is based on a 12 column layout with different breakpoints based on the screen size. </p>
+
+      <xmp>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              1 of 2
+            </ion-col>
+            <ion-col>
+              2 of 2
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              1 of 3
+            </ion-col>
+            <ion-col>
+              2 of 3
+            </ion-col>
+            <ion-col>
+              3 of 3
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </xmp>
+
+      <p>This is a basic grid with auto-width for the columns. Each column will take the same space. You can add no-padding tag to ion-grid if you don't need extra spacing.</p>
+
+      <p>If you want to set the width for each column, you can use the 12 columns grid structure and define it like this:</p>
+
+      <xmp>
+        <ion-col col-8>
+      </xmp>
+
+      <p>If you want a column to take full width on small screens, 6 cols on tablet screens and 3 on bigger screens, you can do this:</p>
+
+      <xmp>
+        <ion-col col-12 col-sm-6 col-lg-3>
+      </xmp>
+
+      <p>If you want to have a space of 3 columns before your column,m you can write:</p>
+
+      <xmp>
+        <ion-col col-3 offset-3>
+
+        <!-- or you can explicit the offset based on the screen size -->
+        <ion-col col-md-3 col-md-offset-3 col-lg-offset-4>
+      </xmp>
+
+
+      <p>Push and pull if you need to reorder columns based on the screen size:</p>
+
+      <xmp>
+        <ion-col col-md-6 push-md-3>
+      </xmp>
+
+
+      <p>You can align the content vertically in your columns like this:</p>
+
+      <xmp>
+        <!-- Align at the top -->
+        <ion-row align-items-start>
+
+        <!-- Align in the middle -->
+        <ion-row align-items-center>
+
+        <!-- Align at the bottom -->
+        <ion-row align-items-end>
+      </xmp>
+
+      <p>You can align the content horizontally in your columns like this:</p>
+
+      <xmp>
+        <!-- Align at the left -->
+        <ion-row justify-items-start>
+
+        <!-- Align in the center -->
+        <ion-row justify-items-center>
+
+        <!-- Align at the right -->
+        <ion-row justify-items-end>
+      </xmp>
+
+
+      <p>You can always read more about the grid system here: <a href="http://ionicframework.com/docs/api/components/grid/Grid/" target="_blank">http://ionicframework.com/docs/api/components/grid/Grid/</a></p>
+
+
+      <h3>HTML Page structure</h3>
+
+      <p>If you are familiar with HTML, won't be hard to decode the page code, as it is the standard HTML format. Of course there are custom tags based on Ionic structure, but these you can find on Ionic's documentstion <a href="http://ionicframework.com/docs/components/#overview" target="_blank">http://ionicframework.com/docs/components/#overview</a></p>
+
+      <p>Most of the pages have the following structure:</p>
+
+      <ul>
+        <li>Header bar</li>
+        <li>Page content</li>
+        <li>Footer</li>
+      </ul>
+
+      <p>You can eliminate the header and footer from the page, but it is necessary to have the ion-content tag.</p>
+
+      <p>If you want to create a new page, here are the steps:</p>
+
+      <ol>
+        <li>In your terminal / cmd write:
+          <xmp>
+            ionic g page myPage
+          </xmp>
+        </li>
+        <li>
+          Open to edit the new created page (HTML file) and you can first replace everything in the page with the content from blank.html page.
+        </li>
+        <li>Open app/module.ts file and import your new page, following the model:
+          <xmp>
+            import { MyPage } from '../pages/my-page/my-page';
+            ...
+            @NgModule({
+            declarations: [
+              MyApp,
+              MyPage,
+              ...
+              entryComponents: [
+              MyApp,
+              MyPage,
+              ...
+          </xmp>
+        </li>
+        <li>
+          If you need to include the page in the menu, you have to open app/component.ts and import your page here too:
+          <xmp>
+            import { MyPage } from '../pages/my-page/my-page';
+            ...
+            this.pages = [
+              {
+                "category":"Home Pages",
+                "subs":
+                  [
+                    {
+                      "title":"Home",
+                      "icon": "icon",
+                      "page": HomePage
+                    },{
+                      "title":"My Page",
+                      "icon": "icon",
+                      "page": Mypage
+                    },{
+                    ...
+          </xmp>
+        </li>
+      </ol>
+
+      <h3>Side menu</h3>
+
+      <p>Side menu HTML structure is defined in app/app.html file. The menu elements are located in app/component.ts. Here you will find the list of categories and subcategories, where you can add your own content based on the model.</p>
+
+      <p>If you want to have only categories and no subcategories, you can do:</p>
+
+      <xmp>
+        this.pages = [
+          {
+            "category":"Home",
+            "icon": "icon",
+            "page": HomePage
+          },{
+            "category":"My Page",
+            "icon": "icon",
+            "page": MyPage
+          },
+          ...
+      </xmp>
+
+      <p>And to adapt app/app.html to support the new structure:</p>
+
+      <xmp>
+        <div *ngFor="let p of pages" text-wrap (click)="openPage(p.page)">
+            <span class="main-menu">
+              {{p.category}}
+            </span>
+          </div>
+      </xmp>
+
+      <p>As you see, we have a spot for categories icon, but we did not used icons in the side menu. Here you can add your own icons, font icons or images, and to adapt your app/app.html file to display the icons:</p>
+
+      <xmp>
+        <span class="subcategory-menu">
+
+          <!-- Font icons -->
+          <i class="{{s.icon}}"></i>
+
+          <!-- Or -->
+
+          <!-- Image icons -->
+          <img src="{{s.icon}}" title="Forward">
+
+          <span class="pl10">{{s.title}}</span>
+        </span>
+      </xmp>
+
+      <h3>Navigation through pages</h3>
+
+      <p>You can navigate to a page using a button element too, or even any type of HTML element will do the job.</p>
+
+      <xmp>
+        <!-- HTML -->
+        <button (click)="openPage()">
+        <!-- This will run a function in .ts file -->
+
+        <!-- TS -->
+        openPage() {
+          this.navCtrl.push(MyPage)
+        }
+      </xmp>
+
+      <p>If you want to send parameters to the page you are navigating to, you can do:</p>
+
+      <xmp>
+        <!-- TS -->
+        openPage() {
+          this.navCtrl.push(MyPage, {
+            id: 'xyz'
+          })
+        }
+
+        <!-- In the final page you navigate to: -->
+        this.customId = navParams.get('id'); // Will be 'xyz'
+      </xmp>
+
+      <p>This behaviour is usefulk if you have a list of items (chat users) and you want to open a single user profile page. You will send the user id as a parameter to the single page.</p>
+
+      <h3>ion-header</h3>
+
+      <p>This is your top bar, here you can include a menu button, logo and a few more icon buttons, based on your app needs. Our pages have in general a left menu icon, and the logo to the right side. You can take the home-admin example, where we have a lot more going on in the header.</p>
+
+      <p>You can have the open menu function by adding menuToggle tag to any element you want as the trigger.</p>
+
+
+      <h3>Background image</h3>
+
+      <p>If you need to apply a big great looking image in the background of the page, you can apply:</p>
+
+      <xmp>
+        <!-- Static full screen image in the background -->
+        <ion-content style="background: url(assets/img/img-bg.jpg)" class="img-cover">
+
+        <!-- Scrollable image on some element background -->
+        <div style="background: url(assets/img/img-bg.jpg)" class="img-cover">
+      </xmp>
+
+      <p>We are using img-cover class because we need the image to scale based on the container dimensions / aspect ratio. This way your image will adapt and fill in the element no matter what.</p>
+
+
+      <h3></h3>
+
+
+    </div>
+
+    <div id="css">
+
+      <h1>Design (CSS)</h1>
+
+      <p>We started a few years ago to build a CSS framewor for personal use. This framework has now a lot of elements, simple CSS functions to make your life easier. Paddings, margins, many other elements, basically everything you might need.</p>
+
+      <p>src/app/app.scss, this stores all the CSS code used in the app.</p>
+
+
+
+      <p>First of all we import the fonts used in the app. And we define SCSS variables that we can apply later as font families.</p>
+
+      <xmp>
+        @import url('https://fonts.googleapis.com/css?family=Marck+Script…
+      </xmp>
+
+      <p>and</p>
+
+      <xmp>
+        $title: 'Marck Script', cursive;
+        $regular: '…
+      </xmp>
+
+
+      <p>Next we define the colors used in the app:
+</p>
+    <xmp>
+      $color-standard: #007aff;
+      $color-accent: #57d603;
+
+      $gray: #7f8c8d;
+      $white: #ffffff;
+      …
+    </xmp>
+
+
+      <p>If you want to customize and give more color to it, you can choose from these already made variables. Color standard stands for blue, accent is the green color used in the app.
+</p>
+      <p>If you want to apply a new color in html to an element background, is enough to add a bg-… class to it:
+
+</p>
+    <xmp>
+      <p class=”bg-red”>…</p>
+    </xmp>
+
+
+      <p>If you want to add a new color to a text, you can add a text-… class to it:
+</p>
+    <xmp>
+      <p class=”text-red”>…</p>
+    </xmp>
+
+      <p>Same, we have variables like:
+</p>
+    <xmp>
+      $green-tr
+    </xmp>
+
+
+      <p>or</p>
+
+    <xmp>
+      $green-tr-more
+    </xmp>
+      <p>These are colors with transparency applied, or more transparrency.
+
+</p>
+
+      <p>If you want to use any of these colors in your scss file, you can do:
+</p>
+    <xmp>
+      .class { color: $red; }
+    </xmp>
+
+
+      <p>We also have defined a few gradient classes, adds a nice and modern touch to your element.
+
+</p>
+
+      <p>Next, we have defined borders (.border-white… ) if you want to add a nice border to an element.
+
+</p>
+
+      <p>After that you will find defaults section, where we defined basic stuff, html, headers, links and paragraph standard styles.
+</p>
+
+
+      <p>And then it comes the framework:
+
+</p>
+
+      <p>Line height (.lh-20 means adding a line-height: 20px to the object)
+
+</p>
+
+      <p>Padding (.p20 means to add 20px padding, pl20 means padding left 20px and so on)
+
+</p>
+
+      <p>Margins are the same as paddings, only that .m20 will add a margin of 20px to the element.
+
+</p>
+
+      <p>Font types are classes to modify the text (.cap is capitalize, .up is uppercase and so on)
+
+</p>
+
+      <p>Relative sizes stands for element sizing based on the container/screen (.half-width will take 50%)
+
+</p>
+
+      <p>Positions stands for absolute positioning mostly (.abs-tl means put the element in the top left of the container)
+
+</p>
+
+      <p>Images contains img-cover (best fit for a background image)
+
+</p>
+
+      <p>Mixins are SCSS functions that you can reuse any time in the file:
+
+</p>
+
+      <p>This is how you define the function:</p>
+
+      <xmp>
+        @mixin radius($t, $r, $b, $l) {
+          -webkit-border-radius: $t $r $b $l !important;
+             -moz-border-radius: $t $r $b $l !important;
+              -ms-border-radius: $t $r $b $l !important;
+                  border-radius: $t $r $b $l !important;
+        }
+      </xmp>
+
+
+      <p>And this is how you include it to an element class:</p>
+
+      <xmp>
+        .round-small-left {
+          @include radius(6px, 0px, 0px, 6px);
+        }
+      </xmp>
+
+
+      <p>Display modes: inline or block, usefull if you want to align div elements in line.
+
+</p>
+
+      <p>Next we have some rounded classes already defined and shaddows, for a nice touch.
+
+</p>
+
+      <p>Font size (.font-12 stands for font-size: 12px and so on)
+
+</p>
+
+      <p>Font weight is used if you want the text to be thinner ol bolder.
+
+</p>
+
+      <p>Borders if you need to add nice looking borders to your elements.
+
+</p>
+
+      <p>Overlay classes are used to apply a darker portion on images that have text on top, just for the text to be more readable. .ov-img-b stands for overlay image bottom and so on.
+</p>
+
+
+
+
+      <p>.blur-img adds a blur effect to an image.
+
+</p>
+
+      <p>Z-index classes are to position elements on top of other elements. .z-lo will position an element in the back of an .z-hi one.
+</p>
+
+
+      <p>Opacity – adds a transparency to the element
+
+</p>
+
+      <p>Height define an element relative height
+
+</p>
+
+      <p>Next there are a few customizations we did for this app particularry:
+
+</p>
+
+      <p>Forms, handles the look of the form elements
+
+</p>
+
+      <p>Slider Carousel for the homepage and single product page image carousels
+
+</p>
+
+      <p>And there are a few other classes created to customize the app elements. If you are familiar with CSS we invite you to have a deeper look, you will understand any portion of the code.
+</p>
+
+
+    </div>
+
+    <div id="ts">
+
+      <h1>Functions (TS)</h1>
+
+      <p>As we will (or already) have a CodeCanyon version of the app, having a lot more functionality, we won't cover too many about this part here.</p>
+      <p>Each page have its own .ts file, typescript file, here is where the app functions are included. </p>
+      <p>Let's take fun-toast page, notifications that appear when you want to display something. </p>
+
+      <p>First we import the functionality in the page</p>
+
+      <xmp>
+        import { ..., ToastController } from 'ionic-angular';
+      </xmp>
+
+      <p>Next we declare it in our constructor:</p>
+
+      <xmp>
+        constructor(..., public toastCtrl: ToastController) {
+      </xmp>
+
+      <p>Then we've got the function:</p>
+
+      <xmp>
+        show(message, position, duration, close) {
+          let toast = this.toastCtrl.create({
+            message: message,
+            duration: duration,
+            position: position,
+            showCloseButton: close,
+          });
+          toast.present();
+        }
+      </xmp>
+
+      <p>Each function you have like this one in .ts page, you can access on click from HTML like this:</p>
+
+      <xmp>
+        <button ion-button (click)="show('I am a nice toast!', 'top', 3000, false)">top</button>
+      </xmp>
+
+      <p>This is how you can add functions to your app.</p>
+
+    </div>
+
+
+    <div id="native">
+
+      <h1>Native plugins</h1>
+
+      <p>Ionic Provide a nice way to include native functions into your app. To access ell the plugins and learn more about each one, we encourage you to browse plugins on their website: https://ionicframework.com/docs/native/</p>
+
+      <h3>Plugins included in the app</h3>
+
+      <ul>
+        <li>App rate</li>
+        <li>Fullscreen</li>
+        <li>Badge</li>
+        <li>Local notifications</li>
+        <li>Social sharing</li>
+        <li>Camera preview - Augmented reality</li>
+        <li>Text to speech</li>
+      </ul>
+
+      <p>To add a new plugin, here are the steps (if you want to add AdMob to your app):</p>
+
+      <ol>
+        <li><xmp>npm install @ionic-native/core --save</xmp> (if you are starting fresh)</li>
+        <li><xmp>ionic cordova plugin add cordova-plugin-admob-free</xmp></li>
+        <li><xmp>npm install --save @ionic-native/admob-free</xmp></li>
+        <li>Navigate to app/module.ts file and add:
+          <xmp>import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';</xmp>
+          And below, inside
+          <xmp>providers: [
+            StatusBar,
+            SplashScreen,</xmp>
+            add to the list:
+            <xmp>AdMobFree,</xmp>
+        </li>
+        <li>Now as the plugin is installed, go to the ts page where you want the plugin to take action, and include it this way:
+          <xmp>import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';</xmp>
+          <p>at the top of the page,</p>
+          <xmp>constructor(private admobFree: AdMobFree) {</xmp>
+            <p>In the constructor, and the function:</p>
+            <xmp>openAds() {
+              const bannerConfig: AdMobFreeBannerConfig = {
+               // add your config here
+               // for the sake of this example we will just use the test config
+               isTesting: true,
+               autoShow: true
+              };
+              this.admobFree.banner.config(bannerConfig);
+
+              this.admobFree.banner.prepare()
+                .then(() => {
+                  // banner Ad is ready
+                  // if we set autoShow to false, then we will need to call the show method here
+                })
+                .catch(e => console.log(e));
+            }</xmp>
+        </li>
+        <li>Now, inside your html file of that page, you can access the function on a button or any other element click:
+          <xmp><button (click)="openAds()"...</xmp>
+        </li>
+      </ol>
+
+    </div>
+
+    <div id="providers">
+
+      <h1>Ionic data providers</h1>
+
+      <p>We have included 3 providers to help you on your way, Wordpress, Woocommerce and Utils provider.</p>
+
+      <p>To have a better understanding, providers are like standard functions, you take some variables, submit to a provider and the provider does its job and return a set of results.</p>
+
+      <p>If we were to take the Wordpress wp.ts provider, we can find this function:</p>
+
+      <xmp>
+        getRecentPosts(page:number = 1){
+          return this.http.get(
+            Config.WORDPRESS_REST_API_URL
+            + 'posts?page=' + page)
+          .map(res => res.json());
+        }
+      </xmp>
+
+      <p>What it does is to take the page number/1 and make a http request to the Wordpress API address, set in config.ts file in the root of src folder of your project. And in return you get the posts from Wordpress website as Json data.</p>
+      <p>Next you can access the provider in your ts page:</p>
+      <xmp>
+        import { WpProvider } from '../../providers/wp/wp';
+
+        public wp: WpProvider // in the constructor
+
+        // than inside your function / constructor
+        this.wp.getRecentPosts()
+        .subscribe(data => {
+          // variable data will have your Wordpress posts info
+      </xmp>
+
+    </div>
+
+
+  </div>
+
+
+</body>
+</html>
